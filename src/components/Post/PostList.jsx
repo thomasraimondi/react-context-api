@@ -8,11 +8,5 @@ export default function PostList() {
   useEffect(() => {
     getPosts();
   }, []);
-  return (
-    <section className="flex flex-wrap gap-4 w-full">
-      {posts.map((post) => (
-        <CardPost key={post.id} post={post} />
-      ))}
-    </section>
-  );
+  return <section className="flex flex-wrap gap-4 w-full">{posts ? posts.map((post) => <CardPost key={post.id} post={post} />) : <div>No posts found</div>}</section>;
 }

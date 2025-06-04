@@ -16,7 +16,7 @@ const PostProvider = ({ children }) => {
     getPosts();
   }, []);
 
-  return <PostContext.Provider value={{ posts, getPosts }}>{children}</PostContext.Provider>;
+  return <PostContext.Provider value={{ posts, getPosts, setPosts }}>{children}</PostContext.Provider>;
 };
 
 const usePost = () => {
